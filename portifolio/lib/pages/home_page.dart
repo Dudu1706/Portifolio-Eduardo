@@ -9,19 +9,78 @@ class HomePage extends StatelessWidget{
       appBar: AppBar(
         backgroundColor: Colors.black,
         title: const Row(
-          Text(
-            'SOBRE MIM ',
-            style: TextStyle(
-              color: Colors.white
-            ),
-          )
-          )
-      ) //AppBar
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: [
+                Text(
+                  'PORTIFÓLIO',
+                  style: TextStyle(
+                    color: Colors.white,
+                  )
+                )//Text
+              ]//Children
+            ), //Row
+            Row(
+              children: [
+                Text(
+                  'EXPERIÊNCIAS',
+                  style: TextStyle(
+                    color: Colors.white,
+                  )
+                ), //Text
 
-      body: Center(
-        child: Column
-      )//Center
+                SizedBox(width: 30),
 
-      ) //Scaffold
+                Text(
+                  'PROJETOS',
+                  style: TextStyle(
+                    color: Colors.white,
+                  )
+                ), //Text
+
+                SizedBox(width: 30),
+
+                Text(
+                  'SOBRE MIM',
+                  style: TextStyle(
+                    color: Colors.white,
+                  )
+                )//Text
+              ] //Children
+            )//Row
+          ] //Children
+        )//Row
+      ), //AppBar
+
+      body: Stack(
+        children: [
+          Container(
+            color: Colors.blue,
+            child: const Center(
+              child: Text(
+                'Cor de fundo',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white), //TextStyle
+              ), //Text 
+              ), //Center
+          ), //Container
+          Positioned(
+                top: 5,
+                right: 5,
+                bottom: 5,
+                width: 5,
+                child: Container(
+                  padding: const EdgeInsets.all(8),
+                  color: Colors.red,
+                  child: const Text(
+                    'Texto',
+                  ), //Text
+                ), //Container
+              ), //Positioned
+        ], //Children
+        ), //Stack
+      ); //Scaffold
   } //Widget Build
 } //HomePage

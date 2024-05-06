@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portifolio/pages/home_page.dart';
 
 
 class MyApp extends StatelessWidget {
@@ -11,7 +12,6 @@ class MyApp extends StatelessWidget {
       home: const HomePage(),
       routes: {
         '/home': (context) => const HomePage(),
-        '/second': (context) => const
       },
       debugShowCheckedModeBanner: false,
     );
