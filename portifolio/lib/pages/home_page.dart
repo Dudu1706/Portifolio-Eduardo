@@ -53,34 +53,20 @@ class HomePage extends StatelessWidget{
         )//Row
       ), //AppBar
 
-      body: Stack(
-        children: [
-          Container(
-            color: Colors.blue,
-            child: const Center(
-              child: Text(
-                'Cor de fundo',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white), //TextStyle
-              ), //Text 
-              ), //Center
-          ), //Container
-          Positioned(
-                top: 5,
-                right: 5,
-                bottom: 5,
-                width: 5,
-                child: Container(
-                  padding: const EdgeInsets.all(8),
-                  color: Colors.red,
-                  child: const Text(
-                    'Texto',
-                  ), //Text
-                ), //Container
-              ), //Positioned
-        ], //Children
-        ), //Stack
+      body: const SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(16.0)
+          child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget> [ 
+            Text(
+              'Meu nome é Eduardo, sou um desenvolvedor de software, estudo Ciência da Computação no Instituto Mauá de Tecnologia',
+              style: TextStyle(fontSize: 16.0),
+            ),
+          ],
+          ),
+        ), //Padding
+        ), //SingleChildScrollView
       ); //Scaffold
   } //Widget Build
 } //HomePage
