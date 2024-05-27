@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portifolio/pages/home_page.dart';
+import 'package:portifolio/pages/sobre_mim.dart';
 
 
 class App extends StatelessWidget {
@@ -10,9 +10,9 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Portifolio',
-      home: const HomePage(),
+      home: const SobreMimPage(),
       routes: {
-        '/home': (context) => const HomePage(),
+        '/sobremim': (context) => const SobreMimPage(),
       },
       theme: ThemeData(
         primarySwatch: Colors.blue,
