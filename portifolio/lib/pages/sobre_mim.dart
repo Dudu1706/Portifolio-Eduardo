@@ -29,15 +29,15 @@ class SobreMimPage extends StatelessWidget {
             children: [
               Expanded(
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(
                       width: MediaQuery.of(context).size.width / 2,
                       height: MediaQuery.of(context).size.height / 2,
                       child: const Resumo(),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width / 2,
-                      child: const Certificacoes(),
+                    const SizedBox(
+                      child: Certificacoes(),
                     ),
                   ],
                 ),
@@ -45,16 +45,12 @@ class SobreMimPage extends StatelessWidget {
               const Expanded(
                 child: Column(
                   children: [
-                    SizedBox(
+                    Flexible(
                       child: Image(
                         image: AssetImage('assets/images/pessoal.jpeg'),
-                        width: 500,
-                        height: 500,
                       ),
                     ),
-                    SizedBox(
-                      width: 500,
-                      height: 300,
+                    Flexible(
                       child: Contato(),
                     ),
                   ],

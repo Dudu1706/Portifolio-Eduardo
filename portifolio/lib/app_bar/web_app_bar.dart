@@ -14,7 +14,7 @@ class WebAppBar extends StatelessWidget {
             'EXPERIÊNCIA',
             style: TextStyle(
               color: Colors.white,
-              fontSize: 30,
+              fontSize: 25,
               fontWeight: FontWeight.bold,
             ),
           ), //Text
@@ -25,7 +25,7 @@ class WebAppBar extends StatelessWidget {
             'PROJETOS',
             style: TextStyle(
               color: Colors.white,
-              fontSize: 30,
+              fontSize: 25,
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -36,19 +36,22 @@ class WebAppBar extends StatelessWidget {
             'SOBRE MIM',
             style: TextStyle(
               color: Colors.white,
-              fontSize: 30,
+              fontSize: 25,
               fontWeight: FontWeight.bold,
             ),
           ),
         ),
       ],
-      title: const Text('PORTIFÓLIO',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 30,
-            fontWeight: FontWeight.bold,
-          ) //TextStyle
-          ),
+      title: const Padding(
+        padding: EdgeInsets.symmetric(vertical: 10, horizontal: 24),
+        child: Text('PORTIFÓLIO',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+            ) //TextStyle
+            ),
+      ),
     ); //AppBar
   } //Widget
 } //WebAppBar
