@@ -11,16 +11,13 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Portifolio',
+      title: 'Portifolio - Eduardo',
       home: const SobreMimPage(),
       routes: {
         '/sobremim': (context) => const SobreMimPage(),
         '/experiencias': (context) => const ExperienciasPage(),
         '/projetos': (context) => const ProjetosPage(),
       },
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
     );
   }
 }

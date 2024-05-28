@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portifolio/app_bar/mobile_app_bar.dart';
 import 'package:portifolio/app_bar/web_app_bar.dart';
 import 'package:portifolio/breakpoints.dart';
+import 'package:portifolio/widgets/experiencia.dart';
 
 class ExperienciasPage extends StatelessWidget {
   const ExperienciasPage({super.key});
@@ -21,24 +22,17 @@ class ExperienciasPage extends StatelessWidget {
                 child: MobileAppBar(),
               ), //PreferredSize
         body: const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(
-                  width: 20,
-                  height: 20,
-                  child: Text(
-                    'Projeto - Striker Quest\nProjeto - Portifolio Pessoal\nCurso - Java Learner\nCurso - Google Cloud Computing Foundations Academy\nPalestra - Detectando Bugs em Código-Fonte com IA',
-                    textAlign: TextAlign.justify,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 24,
-                      fontWeight: FontWeight.normal,
-                    ),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    child: Experiencia(),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),

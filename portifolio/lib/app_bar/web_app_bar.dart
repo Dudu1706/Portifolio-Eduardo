@@ -1,23 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:portifolio/pages/experiencias.dart';
-import 'package:portifolio/pages/projetos.dart';
-import 'package:portifolio/pages/sobre_mim.dart';
 
-class WebAppBar extends StatelessWidget {
+class WebAppBar extends StatefulWidget {
   const WebAppBar({super.key});
-  
+  @override
+  State<WebAppBar> createState() => _WebAppBarState();
+}
+
+class _WebAppBarState extends State<WebAppBar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.black,
-      actions: const [
+      actions: [
         Padding(
-          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 24),
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 24),
           child: TextButton(
             onPressed: () {
-              Navigator.pushNamed(context, '/sobremim');
+              Navigator.pushNamed(context, '/experiencias');
             },
-            child: Text(
+            child: const Text(
               'EXPERIÊNCIA',
               style: TextStyle(
                 color: Colors.white,
@@ -28,24 +29,34 @@ class WebAppBar extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 24),
-          child: Text(
-            'PROJETOS',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 24),
+          child: TextButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/projetos');
+            },
+            child: const Text(
+              'PROJETOS',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
-        ), //TextButton
+          ), //TextButton
+        ),
         Padding(
-          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 24),
-          child: Text(
-            'SOBRE MIM',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 24),
+          child: TextButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/sobremim');
+            },
+            child: const Text(
+              'SOBRE MIM',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ),
@@ -61,5 +72,5 @@ class WebAppBar extends StatelessWidget {
             ),
       ),
     ); //AppBar
-  } //Widget
-} //WebAppBar
+  }
+}
