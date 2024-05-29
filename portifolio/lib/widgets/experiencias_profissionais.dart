@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Experiencia extends StatelessWidget {
-  const Experiencia({super.key});
+class ExperienciaProfissional extends StatelessWidget {
+  const ExperienciaProfissional({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +9,7 @@ class Experiencia extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text(
-          'Experiências',
+          'Experiências Profissionais',
           style: TextStyle(
             color: Colors.white,
             fontSize: 40,
@@ -17,7 +17,16 @@ class Experiencia extends StatelessWidget {
           ),
         ),
         Text(
-          'descrever',
+          'Assistente de Vendas | Jan/23 - Atual',
+          textAlign: TextAlign.justify,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 30,
+            fontWeight: FontWeight.normal,
+          ),
+        ),
+        Text(
+          '   -Cadastratar e atender clientes;\n   -Gerenciar cadastros;\n   -Negociar preços;\n   -Auxiliar na coordenação de funcionários;',
           textAlign: TextAlign.justify,
           style: TextStyle(
             color: Colors.white,

@@ -10,6 +10,7 @@ class _WebAppBarState extends State<WebAppBar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      automaticallyImplyLeading: false,
       backgroundColor: Colors.black,
       actions: [
         Padding(
@@ -20,6 +21,22 @@ class _WebAppBarState extends State<WebAppBar> {
             },
             child: const Text(
               'EXPERIÊNCIA',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+              ),
+            ), //Text
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 24),
+          child: TextButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/cursos');
+            },
+            child: const Text(
+              'CURSOS',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 25,

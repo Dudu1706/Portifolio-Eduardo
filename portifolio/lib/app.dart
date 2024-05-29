@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portifolio/pages/cursos.dart';
 import 'package:portifolio/pages/experiencias.dart';
 import 'package:portifolio/pages/projetos.dart';
 import 'package:portifolio/pages/sobre_mim.dart';
@@ -17,6 +18,7 @@ class App extends StatelessWidget {
         '/sobremim': (context) => const SobreMimPage(),
         '/experiencias': (context) => const ExperienciasPage(),
         '/projetos': (context) => const ProjetosPage(),
+        '/cursos': (context) => const CursosPage(),
       },
     );
   }

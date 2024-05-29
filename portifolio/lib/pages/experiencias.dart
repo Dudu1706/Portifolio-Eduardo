@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:portifolio/app_bar/mobile_app_bar.dart';
 import 'package:portifolio/app_bar/web_app_bar.dart';
 import 'package:portifolio/breakpoints.dart';
-import 'package:portifolio/widgets/experiencia.dart';
+import 'package:portifolio/widgets/experiencias_profissionais.dart';
+import 'package:portifolio/widgets/tecnologias.dart';
 
 class ExperienciasPage extends StatelessWidget {
   const ExperienciasPage({super.key});
@@ -21,21 +22,40 @@ class ExperienciasPage extends StatelessWidget {
                 preferredSize: Size(double.infinity, 56),
                 child: MobileAppBar(),
               ), //PreferredSize
-        body: const Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    child: Experiencia(),
-                  ),
-                ],
+        body: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+          Column(
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width / 2,
+                      height: MediaQuery.of(context).size.height / 2,
+                      child: const ExperienciaProfissional(),
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
-        ),
+            ],
+          ),
+          Column(
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width / 2,
+                      height: MediaQuery.of(context).size.height / 2,
+                      child: const Tecnologias(),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ]),
       );
     });
   }

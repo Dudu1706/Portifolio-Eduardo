@@ -36,22 +36,24 @@ class SobreMimPage extends StatelessWidget {
                       height: MediaQuery.of(context).size.height / 2,
                       child: const Resumo(),
                     ),
-                    const SizedBox(
-                      child: Certificacoes(),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width / 2,
+                      child: const Certificacoes(),
                     ),
                   ],
                 ),
               ),
-              const Expanded(
+              Expanded(
                 child: Column(
                   children: [
-                    Flexible(
+                    const Flexible(
                       child: Image(
                         image: AssetImage('assets/images/pessoal.jpeg'),
                       ),
                     ),
-                    Flexible(
-                      child: Contato(),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height / 2,
+                      child: const Contato(),
                     ),
                   ],
                 ),
